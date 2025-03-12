@@ -14,18 +14,18 @@ const tabs = [
   },
   {
     label: "Work History",
-    staticImg: "/me walking.png",
-    animatedImg: "/me walking.gif",
+    staticImg: "/me army shooting.png",
+    animatedImg: "/me army shooting.gif",
   },
   {
     label: "Personal Projects",
-    staticImg: "/me walking.png",
-    animatedImg: "/me walking.gif",
+    staticImg: "/me in front of computer.png",
+    animatedImg: "/me in front of computer.gif",
   },
   {
     label: "Education History",
-    staticImg: "/me walking.png",
-    animatedImg: "/me walking.gif",
+    staticImg: "/me graduation.png",
+    animatedImg: "/me graduation.gif",
   },
   {
     label: "3D Projects and Prints",
