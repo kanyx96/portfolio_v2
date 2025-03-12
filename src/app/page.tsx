@@ -45,9 +45,9 @@ export default function Home() {
 
   return (
     <div className={styles.baseContainer}>
-      <Header_Bar navigation_value='Home' />
+      <Header_Bar />
       <Box className={styles.mainBoxStyle}>
-        <Paper elevation={3} className={styles.paperContentStyle}>
+        <Paper elevation={3} className={styles.paperContentStyle} sx={{borderRadius: "10px", backgroundColor: "#FEFEFE"}}>
           {/* Left section with tabs */}
           <Box
             sx={{
@@ -90,6 +90,7 @@ export default function Home() {
                   iconPosition='end'
                   onMouseEnter={() => setHoveredTab(index)}
                   onMouseLeave={() => setHoveredTab(null)}
+                  className="pixelated"
                 />
               ))}
             </Tabs>

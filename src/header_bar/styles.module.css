@@ -1,0 +1,30 @@
+.headerMain {
+    color: black;
+    height: 75px;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #28221E;
+}
+
+.nameText {
+    font-weight: bold;
+    color: #CECBC8;
+}
+
+.lazybackpackerLinkContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.lazybackpackerText {
+    padding-left: 25px;
+    padding-right: 25px;
+    color: #CECBC8;
+}
