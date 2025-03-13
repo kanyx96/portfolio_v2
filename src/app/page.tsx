@@ -29,8 +29,8 @@ const tabs = [
   },
   {
     label: "3D Projects and Prints",
-    staticImg: "/me walking.png",
-    animatedImg: "/me walking.gif",
+    staticImg: "/3D printer.png",
+    animatedImg: "/3D printer.gif",
   },
 ];
 
@@ -47,7 +47,11 @@ export default function Home() {
     <div className={styles.baseContainer}>
       <Header_Bar />
       <Box className={styles.mainBoxStyle}>
-        <Paper elevation={3} className={styles.paperContentStyle} sx={{borderRadius: "10px", backgroundColor: "#FEFEFE"}}>
+        <Paper
+          elevation={3}
+          className={styles.paperContentStyle}
+          sx={{ borderRadius: "10px", backgroundColor: "#FEFEFE" }}
+        >
           {/* Left section with tabs */}
           <Box
             sx={{
@@ -77,8 +81,13 @@ export default function Home() {
                           : tab.staticImg
                       }
                       alt={tab.label}
-                      width={75}
-                      height={75}
+                      width={index === 4 ? 50 : 75}
+                      height={index === 4 ? 50 : 75}
+                      style={
+                        index === 4
+                          ? { marginRight: 12.5}
+                          : {}
+                      }
                     />
                   }
                   sx={{
@@ -90,7 +99,7 @@ export default function Home() {
                   iconPosition='end'
                   onMouseEnter={() => setHoveredTab(index)}
                   onMouseLeave={() => setHoveredTab(null)}
-                  className="pixelated"
+                  className='pixelated'
                 />
               ))}
             </Tabs>
