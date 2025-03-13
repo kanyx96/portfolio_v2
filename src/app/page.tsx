@@ -73,6 +73,7 @@ export default function Home() {
                   label={tab.label}
                   icon={
                     <Image
+                      unoptimized
                       src={
                         selectedTab === index
                           ? tab.animatedImg
@@ -83,11 +84,7 @@ export default function Home() {
                       alt={tab.label}
                       width={index === 4 ? 50 : 75}
                       height={index === 4 ? 50 : 75}
-                      style={
-                        index === 4
-                          ? { marginRight: 12.5}
-                          : {}
-                      }
+                      style={index === 4 ? { marginRight: 12.5 } : {}}
                     />
                   }
                   sx={{

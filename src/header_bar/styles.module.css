@@ -15,16 +15,30 @@
     color: #CECBC8;
 }
 
-.lazybackpackerLinkContainer {
+.lazybackpackerNameContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    width: 295px;
+}
+
+.lazybackpackerNameContainer:hover {
+    cursor: pointer;
 }
 
 .lazybackpackerText {
     padding-left: 25px;
     padding-right: 25px;
     color: #CECBC8;
+}
+
+.menuStyle {
+    width: 350px
+}
+
+.lazybackpackerLinkButton {
+    font-size: 12px;
+    padding: 4px 8px;
 }
