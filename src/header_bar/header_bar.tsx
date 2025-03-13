@@ -3,11 +3,12 @@
 import { Box, Button, Menu, MenuItem, Typography } from "@mui/material";
 import styles from "./styles.module.css";
 import Image from "next/image";
-import { useState } from "react";
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { useRef, useState } from "react";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 export default function Header_Bar() {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
+  const elementRef = useRef<HTMLDivElement | null>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -20,13 +21,17 @@ export default function Header_Bar() {
   return (
     <header className={styles.headerMain}>
       <h1 className={`${styles.nameText} text-3xl pixelated`}>Kan Yi Xin</h1>
-      <div className={styles.lazybackpackerNameContainer} onClick={handleClick}>
-        <Typography variant='h6' className={styles.lazybackpackerText}>
+      <div
+        className={styles.lazybackpackerNameContainer}
+        onClick={handleClick}
+        ref={elementRef}
+      >
+        <Typography variant="h6" className={styles.lazybackpackerText}>
           The Lazy Backpacker
         </Typography>
         <Image
-          src='/lazy-backpack-logo.png'
-          alt='lazy backpack'
+          src="/lazy-backpack-logo.png"
+          alt="lazy backpack"
           width={50}
           height={50}
         />
@@ -45,8 +50,15 @@ export default function Header_Bar() {
           vertical: "top",
           horizontal: "right",
         }}
-        className={styles.menuStyle}
-        slotProps={{ paper: { className: styles.menuStyle } }}
+        slotProps={{
+          paper: {
+            sx: {
+              width: elementRef.current
+                ? elementRef.current.offsetWidth
+                : "auto", // Match width dynamically
+            },
+          },
+        }}
       >
         {/* Non-clickable paragraph */}
         <MenuItem sx={{ pointerEvents: "none", whiteSpace: "normal" }}>
@@ -58,22 +70,24 @@ export default function Header_Bar() {
 
         {/* Clickable button */}
         <MenuItem>
-            <Button
-              fullWidth
-              variant="contained"
-              color="primary"
-              onClick={() => window.open("https://thelazybackpacker.com", "_blank")}
-              sx={{
-                fontSize: "12px", 
-                padding: "4px 8px",
-                height: "30px",
-                borderRadius: "7px",
-              }}
-              endIcon={<OpenInNewIcon />}
-            >
-              Visit thelazybackpacker.com
-            </Button>
-          </MenuItem>
+          <Button
+            fullWidth
+            variant="contained"
+            color="primary"
+            onClick={() =>
+              window.open("https://thelazybackpacker.com", "_blank")
+            }
+            sx={{
+              fontSize: "12px",
+              padding: "4px 8px",
+              height: "30px",
+              borderRadius: "7px",
+            }}
+            endIcon={<OpenInNewIcon />}
+          >
+            Visit thelazybackpacker.com
+          </Button>
+        </MenuItem>
       </Menu>
     </header>
   );
