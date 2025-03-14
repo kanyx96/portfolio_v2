@@ -5,6 +5,9 @@ import { Box, Tabs, Tab, Typography, Paper } from "@mui/material";
 import styles from "./styles.module.css";
 import Header_Bar from "@/header_bar/header_bar";
 import Image from "next/image";
+import { About_Me } from "@/components/aboutMe";
+import { Work_History } from "@/components/workHistory";
+import { Personal_Projects } from "@/components/personalProjects";
 
 const tabs = [
   {
@@ -103,13 +106,18 @@ export default function Home() {
           </Box>
 
           {/* Right section with content */}
-          <Box sx={{ flex: 1, p: 3 }}>
-            <Typography variant='h6'>
-              {tabs[selectedTab].label} Content
-            </Typography>
-            <Typography variant='body1' sx={{ mt: 1 }}>
-              Placeholder content for {tabs[selectedTab].label}.
-            </Typography>
+          <Box sx={{ flex: 1, p: 3, height: "100%" }}>
+            {tabs[selectedTab].label === "About Me" ? (
+              <About_Me />
+            ) : tabs[selectedTab].label === "Work History" ? (
+              <Work_History />
+            ) : tabs[selectedTab].label === "Personal Projects" ? (
+              <Personal_Projects />
+            ) : (
+              <Typography variant='body1' sx={{ mt: 1 }}>
+                Placeholder content for {tabs[selectedTab].label}.
+              </Typography>
+            )}
           </Box>
         </Paper>
       </Box>

@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Button, Menu, MenuItem, Typography } from "@mui/material";
+import { Box, Button, List, ListItem, Menu, MenuItem, Typography } from "@mui/material";
 import styles from "./styles.module.css";
 import Image from "next/image";
 import { useRef, useState } from "react";
@@ -62,9 +62,13 @@ export default function Header_Bar() {
       >
         {/* Non-clickable paragraph */}
         <MenuItem sx={{ pointerEvents: "none", whiteSpace: "normal" }}>
-          <Box sx={{ fontSize: "14px", color: "gray" }}>
-            This is a static paragraph inside the menu. It provides some
-            information but cannot be clicked.
+          <Box sx={{ fontSize: "14px", color: "#28221E" }}>
+            <Typography variant="subtitle2">Smart AI Travel Itinerary Planner</Typography>
+            <List dense>
+              <ListItem>AI powered</ListItem>
+              <ListItem>Customisable Itinerary</ListItem>
+              <ListItem>Maps and direction integration</ListItem>
+            </List>
           </Box>
         </MenuItem>
 
