@@ -43,12 +43,6 @@ export function About_Me() {
               </ListItem>
             </List>
           </Box>
-          <Typography variant='body1'>
-            Driven and passionate software developer. Outspoken, creative and
-            fearless in generating innovative ideas and thinking outside the
-            box. Able to work well in group projects with good people’s skills.
-            Fast learner with competence in multiple languages.
-          </Typography>
         </Box>
       </Grid2>
       <Grid2 size={4}>
