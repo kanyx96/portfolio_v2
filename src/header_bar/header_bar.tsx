@@ -63,7 +63,7 @@ export default function Header_Bar() {
         {/* Non-clickable paragraph */}
         <MenuItem sx={{ pointerEvents: "none", whiteSpace: "normal" }}>
           <Box sx={{ fontSize: "14px", color: "#28221E" }}>
-            <Typography variant="subtitle2">Smart AI Travel Itinerary Planner</Typography>
+            <Typography variant="subtitle2">Smart Travel Itinerary Planner</Typography>
             <List dense>
               <ListItem>AI powered</ListItem>
               <ListItem>Customisable Itinerary</ListItem>

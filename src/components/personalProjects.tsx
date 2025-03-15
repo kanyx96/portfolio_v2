@@ -29,8 +29,9 @@ export function Personal_Projects() {
             marginRight: "10px",
           }}
         >
-          The Lazy Backpacker
+          The Lazy Backpacker (Jan 2024 - Jan 2025)
         </Typography>
+        {/* need to encase visit thelazybackpacker.com */}
         <OpenInNewIcon
           className={styles.iconStyle}
           onClick={() => window.open("https://thelazybackpacker.com", "_blank")}
@@ -95,7 +96,7 @@ export function Personal_Projects() {
           marginRight: "10px",
         }}
       >
-        Yumx
+        Yumx (Jun 2023 – Dec 2023)
       </Typography>
       <List sx={{ paddingBottom: "25px", width: "100%" }}>
         <ListItem
@@ -113,11 +114,6 @@ export function Personal_Projects() {
             <ListItem>
               Helps users overcome choice fatigue by randomizing food options
               based on preferences such as distance, ratings, and cuisine type
-            </ListItem>
-            <ListItem>
-              Embarked on this project because I was intrigued by phone
-              application development as I was not exposed to it in my previous
-              job
             </ListItem>
             <ListItem>
               Fully developed the application in Dec 2023 using React Native

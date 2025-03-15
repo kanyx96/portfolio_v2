@@ -38,7 +38,7 @@ export function About_Me() {
               </ListItem>
               <ListItem>
                 <Typography variant='body1' sx={{ fontSize: 16 }}>
-                  Outspoken, confident, creative and Fearless
+                  Outspoken and Confident
                 </Typography>
               </ListItem>
             </List>

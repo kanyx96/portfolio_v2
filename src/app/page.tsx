@@ -8,6 +8,8 @@ import Image from "next/image";
 import { About_Me } from "@/components/aboutMe";
 import { Work_History } from "@/components/workHistory";
 import { Personal_Projects } from "@/components/personalProjects";
+import { Education_History } from "@/components/educationHistory";
+import { ThreeD_Projects } from "@/components/threedProjects";
 
 const tabs = [
   {
@@ -16,14 +18,14 @@ const tabs = [
     animatedImg: "/me walking.gif",
   },
   {
-    label: "Work History",
-    staticImg: "/me army shooting.png",
-    animatedImg: "/me army shooting.gif",
-  },
-  {
     label: "Personal Projects",
     staticImg: "/me in front of computer.png",
     animatedImg: "/me in front of computer.gif",
+  },
+  {
+    label: "Work History",
+    staticImg: "/me army shooting.png",
+    animatedImg: "/me army shooting.gif",
   },
   {
     label: "Education History",
@@ -109,10 +111,14 @@ export default function Home() {
           <Box sx={{ flex: 1, p: 3, height: "100%" }}>
             {tabs[selectedTab].label === "About Me" ? (
               <About_Me />
-            ) : tabs[selectedTab].label === "Work History" ? (
-              <Work_History />
             ) : tabs[selectedTab].label === "Personal Projects" ? (
               <Personal_Projects />
+            ) : tabs[selectedTab].label === "Work History" ? (
+              <Work_History />
+            ) : tabs[selectedTab].label === "Education History" ? (
+              <Education_History />
+            ) : tabs[selectedTab].label === "3D Projects and Prints" ? (
+              <ThreeD_Projects />
             ) : (
               <Typography variant='body1' sx={{ mt: 1 }}>
                 Placeholder content for {tabs[selectedTab].label}.
