@@ -1,4 +1,4 @@
-import { Box, Grid2, List, ListItem, Typography } from "@mui/material";
+import { Box, Grid2, List, ListItem, Tooltip, Typography } from "@mui/material";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import styles from "./styles.module.css";
 import Image from "next/image";
@@ -32,10 +32,12 @@ export function Personal_Projects() {
           The Lazy Backpacker (Jan 2024 - Jan 2025)
         </Typography>
         {/* need to encase visit thelazybackpacker.com */}
+        <Tooltip title="Visit thelazybackpacker.com">
         <OpenInNewIcon
           className={styles.iconStyle}
           onClick={() => window.open("https://thelazybackpacker.com", "_blank")}
         />
+        </Tooltip>
       </Box>
       <List sx={{ paddingBottom: "25px", width: "100%" }}>
         <ListItem
