@@ -48,8 +48,9 @@ export function About_Me() {
               My Dream
             </Typography>
             <Typography variant='body1'>
-              I wish to work my whole life to build products (be it software or
-              hardware) that helps others - to solve real world problems.
+              I aspire to spend my entire career creating products—whether
+              software or hardware—that make a difference and help solve
+              real-world problems.
             </Typography>
           </div>
           <div>
@@ -57,9 +58,10 @@ export function About_Me() {
               Journey as an Engineer
             </Typography>
             <Typography variant='body1'>
-              Being the son of a mechanical engineer, loving Legos and problem
-              solving, I always knew I wanted to be an engineer. As such, it was
-              without question that I would study engineering in University.
+              Growing up as the son of a mechanical engineer, with a passion for
+              Legos and problem-solving, I always knew I wanted to pursue a
+              career in engineering. So, it was an easy decision for me to study
+              engineering at university.
               <br />
               <br />
               My first exposure to software engineering was in University. I was
