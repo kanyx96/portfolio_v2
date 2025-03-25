@@ -66,7 +66,7 @@ export default function Home() {
 
   return isMobile ? (
     <div className={styles.mobileBaseContainer}>
-      <Typography variant='body1'>Mobile Display under construction</Typography>
+      <Typography variant='body1'>Mobile display under construction</Typography>
     </div>
   ) : (
     <div className={styles.baseContainer}>
