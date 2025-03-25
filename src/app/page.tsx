@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Box, Tabs, Tab, Typography, Paper } from "@mui/material";
 import styles from "./styles.module.css";
 import Header_Bar from "@/header_bar/header_bar";
@@ -48,7 +48,27 @@ export default function Home() {
 
   const [hoveredTab, setHoveredTab] = useState<null | number>(null);
 
-  return (
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    const checkDevice = () => {
+      if (typeof window !== "undefined") {
+        const userAgent = navigator.userAgent;
+        const mobileRegex = /Mobi|Android|iPhone|iPad|iPod/i;
+        setIsMobile(mobileRegex.test(userAgent));
+      }
+    };
+
+    checkDevice();
+    window.addEventListener("resize", checkDevice);
+    return () => window.removeEventListener("resize", checkDevice);
+  }, []);
+
+  return isMobile ? (
+    <div className={styles.mobileBaseContainer}>
+      <Typography variant='body1'>Mobile Display under construction</Typography>
+    </div>
+  ) : (
     <div className={styles.baseContainer}>
       <Header_Bar />
       <Box className={styles.mainBoxStyle}>

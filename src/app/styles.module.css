@@ -1,6 +1,5 @@
 .baseContainer {
-    height: 100vh;
-    width: 100vw;
+    
     position: relative;
     overflow-y: "auto";
     display: flex;
@@ -26,4 +25,10 @@
 
 .backgroundColor {
     background-color: #7F6951;
+}
+
+.mobileBaseContainer {
+    height: 100vh;
+    width: 100vw;
+    align-content: center;
 }
